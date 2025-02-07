@@ -1,13 +1,8 @@
 version: '3.8'
-
 services:
   notepad:
-    image: python:3.9
+    build: .
     container_name: minimal-web-notepad
-    working_dir: /app
-    command: ["python", "notepad.py"]
     ports:
       - "5000:5000"
-    volumes:
-      - ./data:/app/data
     restart: unless-stopped
