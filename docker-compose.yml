@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  notepad:
+    build: .
+    container_name: minimal-web-notepad
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+
